@@ -1,5 +1,5 @@
-import AssignmentsDao from "./dao";
-export default function AssignmentRoutes(app, db) {
+import AssignmentsDao from "../assignments/dao.js";
+export default function AssignmentsRoutes(app, db) {
     const dao = AssignmentsDao(db);
     const findAssignmentsForModule = (req, res) => {
         const { moduleId } = req.params;

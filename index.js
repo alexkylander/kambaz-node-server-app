@@ -7,6 +7,8 @@ import UserRoutes from "./kambaz/users/routes.js";
 import CourseRoutes from './kambaz/courses/routes.js';
 import "dotenv/config";
 import session from "express-session";
+import ModulesRoutes from './kambaz/modules/routes.js';
+import AssignmentsRoutes from './kambaz/assignments/routes.js';
 const app = express();
 app.use(
   cors({
@@ -34,4 +36,6 @@ Hello(app);
 Lab5(app);
 UserRoutes(app, db);
 CourseRoutes(app, db);
+ModulesRoutes(app, db);
+AssignmentsRoutes(app, db);
 app.listen(process.env.PORT || 4000)
